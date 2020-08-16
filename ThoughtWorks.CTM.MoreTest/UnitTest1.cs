@@ -30,5 +30,19 @@ namespace ThoughtWorks.CTM.MoreTest
             //Assert
             Assert.Throws<Exception>(() => processor.ProcessFile(lines, 0));
         }
+
+        [Fact]
+        public void Process_With0Tracks_success()
+        {
+            //Arrange
+            var lines = File.ReadAllLines(@".\SampleInput.txt");
+            var processor = new Processor();
+
+            //Act
+
+            //Assert
+            Assert.Throws<Exception>(() => processor.ProcessFile(lines, 0));
+
+        }
     }
 }

@@ -38,19 +38,7 @@ namespace ThoughtWorks.CTM.Test
             Assert.Equal(5, conferenceTracks.Count);
         }
 
-        [Fact]        
-        public void Process_With0Tracks_success()
-        {
-            //Arrange
-            var lines = File.ReadAllLines(@".\SampleInput.txt");
-            var processor = new Processor();
-
-            //Act
-           
-            //Assert
-            Assert.Throws<Exception>(() => processor.ProcessFile(lines, 0));
-           
-        }
+       
 
        
     }
