@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Xunit;
 
 namespace ThoughtWorks.CTM.MoreTest
@@ -15,6 +16,19 @@ namespace ThoughtWorks.CTM.MoreTest
             //Assert
             Assert.True(true);
 
+        }
+
+        [Fact]
+        public void Process_WithNegativeTracks_success()
+        {
+            //Arrange
+            var lines = File.ReadAllLines(@".\SampleInput.txt");
+            var processor = new Processor();
+
+            //Act
+
+            //Assert
+            Assert.Throws<Exception>(() => processor.ProcessFile(lines, 0));
         }
     }
 }
